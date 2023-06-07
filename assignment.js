@@ -45,14 +45,16 @@ function picnicBudget(numberOfPeople)
 // console.log(picnicBudget(1414));
 
 //Problem 4 Friend name with odd number of character
-const names = ["Abul", "Babul", "Kabul", "Kuddus"]
+const names = ["Abul", "Babuli", "Kabuli", "Kuddus", "Kalam"];
 
 function oddFriend(names)
 {
     for (let i = 0; i < names.length; i++) {
-        const element = names[i];
-        
+        const name = names[i];
+        if (name.length % 2 == 1){
+            return name;
+        }
     }
-
+    return "You have no friend with odd number of characters in their names.";
 }
-console.log(oddFriend);
+console.log(oddFriend(names))
